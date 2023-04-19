@@ -1,7 +1,20 @@
-import * as React from 'react'
+import { QueryClient, QueryClientProvider } from 'react-query'
+import PlayerListContainer from './components/PlayerListContainer/PlayerListContainer'
+import { Provider } from 'react-redux'
+import store from './app/store'
+
+const queryClient = new QueryClient()
 
 const App = () => {
-  return <div className="App">Couch-Scout</div>
+  return (
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <div className="App">
+          <PlayerListContainer />
+        </div>
+      </QueryClientProvider>
+    </Provider>
+  )
 }
 
 export default App
