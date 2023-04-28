@@ -1,4 +1,3 @@
-// src/features/counter/counterSlice.js
 import { createSlice } from '@reduxjs/toolkit'
 import { RootState } from '../../app/store'
 
@@ -10,19 +9,19 @@ const initialState: ApplicationState = {
   playersListState: [],
 }
 
-// we need to be able to take from this list & add to another slice
-
 const playersListSlice = createSlice({
   name: 'playersList',
-  initialState,
+  initialState: initialState,
   reducers: {
     populatePlayerList: (state, action) => {
-      state.playersListState.push(action.payload)
+      state.playersListState = [...state.playersListState, ...action.payload]
+      console.log(state.playersListState)
     },
   },
 })
 
 export const { populatePlayerList } = playersListSlice.actions
+
 export const selectPlayerList = (state: RootState) =>
   state.allPlayers.playersListState
 
