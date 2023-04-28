@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { useQuery } from 'react-query'
-import { useAppDispatch } from '../../app/hooks'
 import PlayerList from '../PlayerList/PlayerList'
-import { populatePlayerList } from '../../features/application/playerListSlice'
 import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { populatePlayerList } from '../../features/application/playerListSlice'
 
 const PlayerListContainer = (): React.ReactElement => {
-  const dispatch = useAppDispatch()
+  const dispatch = useDispatch()
 
   const fetchPlayers = async () => {
     const response = await axios.get('http://localhost:5100/')
@@ -15,9 +15,13 @@ const PlayerListContainer = (): React.ReactElement => {
     return data
   }
 
-  const { isLoading } = useQuery('players-list', fetchPlayers, {
+  const { isLoading, error } = useQuery('players-list', fetchPlayers, {
     staleTime: Infinity,
   })
+
+  if (error) {
+    return <>{error}</>
+  }
 
   return <>{isLoading ? <>Loading Players</> : <PlayerList />}</>
 }

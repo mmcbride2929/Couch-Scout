@@ -5,7 +5,7 @@ import rosterListSlice from '../features/application/rosterListSlice'
 const store = configureStore({
   reducer: {
     allPlayers: playerListSlice,
-    rosterPlayers: rosterListSlice,
+    rosterList: rosterListSlice,
   },
 })
 
