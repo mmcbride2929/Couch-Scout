@@ -1,0 +1,11 @@
+.playertotal-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 1px;
+}
+
+.playertotal-container h1 {
+  font-size: 1.2rem;
+}

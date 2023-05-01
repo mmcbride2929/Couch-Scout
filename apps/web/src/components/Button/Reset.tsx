@@ -5,12 +5,11 @@ import {
 } from '../../features/application/rosterListSlice'
 import Button from './Button'
 
-const ResetButton = (): React.ReactElement => {
+const Reset = (): React.ReactElement => {
   const dispatch = useAppDispatch()
   const rosterListArr = useAppSelector(selectRosterList) as string[]
 
   const handleClick: () => void = () => {
-    console.log('clicked')
     dispatch(resetRoster())
   }
 
@@ -24,4 +23,4 @@ const ResetButton = (): React.ReactElement => {
     </>
   )
 }
-export default ResetButton
+export default Reset

@@ -1,7 +1,8 @@
-import { useAppDispatch } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import {
   addPlayer,
   removePlayer,
+  selectRosterList,
 } from '../../features/application/rosterListSlice'
 import Button from '../Button/Button'
 
@@ -20,6 +21,7 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
   const { name, position, age, _id } = playerData
 
   const dispatch = useAppDispatch()
+  const rosterListArr = useAppSelector(selectRosterList)
 
   const handleClick = () => {
     if (rosterPlayer) {
@@ -31,19 +33,26 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
     }
   }
 
+  const disabled = rosterListArr.length >= 53 && !rosterPlayer ? true : false
+
+  const rosterName = name.split(' ')
+
   return (
     <div>
-      <div>
-        <h1>{name}</h1>
-        <span>{position}</span>
-      </div>
-      <span>{age}</span>
-      <div>
-        <Button
-          label={rosterPlayer ? 'Remove' : 'Add'}
-          handleClick={handleClick}
-        />
-      </div>
+      {rosterPlayer ? (
+        <h1>{rosterName[0].charAt(0) + '. ' + rosterName[1]}</h1>
+      ) : (
+        <>
+          <h1>{name}</h1>
+          <span>{position}</span>
+          <span>{age}</span>
+        </>
+      )}
+      <Button
+        label={rosterPlayer ? 'Remove' : 'Add'}
+        handleClick={handleClick}
+        disabled={disabled}
+      />
     </div>
   )
 }

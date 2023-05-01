@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Player from '../Player/Player'
 import { PlayerInterface } from '../PlayerList/PlayerList'
+import RosterListPositionGroup from '../RosterListPositionGroup/RosterListPositionGroup'
 
 interface Props {
   rosterListArr: string[]
@@ -14,15 +14,21 @@ const RosterList = ({ rosterListArr, playerListArr }: Props) => {
 
   return (
     <div>
-      {filteredRosterPlayers.map((singlePlayerObject) => {
-        return (
-          <Player
-            key={singlePlayerObject._id}
-            playerData={singlePlayerObject}
-            rosterPlayer={true}
-          />
-        )
-      })}
+      <RosterListPositionGroup position="QB" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="RB" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="WR" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="TE" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="OT" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="IOL" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="CB" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="S" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="DT" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="ILB" players={filteredRosterPlayers} />
+      <RosterListPositionGroup position="OLB" players={filteredRosterPlayers} />
+      <RosterListPositionGroup
+        position="Special Teams"
+        players={filteredRosterPlayers}
+      />
     </div>
   )
 }
