@@ -2,29 +2,30 @@
   display: flex;
   margin-top: 1.75rem;
   padding-bottom: 1px;
+  border-bottom: 1px solid var(--gray);
 }
 
-.player-properties {
+.roster-properties {
   display: flex;
   justify-content: space-between;
   width: 90%;
 }
 
-.player-properties h1 {
+.roster-properties h1 {
   font-size: 0.9rem;
 }
 
-.player-properties .name {
+.name {
   width: 55%;
 }
 
-.player-properties .age {
+.age {
   width: 17.5%;
 }
-.player-properties .position {
+.position {
   width: 27.5%;
 }
 
-.list-header-container .empty {
+.empty {
   width: 10%;
 }

@@ -31,7 +31,6 @@ const PlayerListContainer = (): React.ReactElement => {
         <>Loading Players</>
       ) : (
         <>
-          <PlayerHeader />
           <PlayerTableHeader />
           <PlayerList />
         </>

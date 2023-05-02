@@ -1,10 +1,10 @@
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { useAppDispatch } from '../../app/hooks'
 import {
   addPlayer,
   removePlayer,
-  selectRosterList,
 } from '../../features/application/rosterListSlice'
-import Button from '../Button/Button'
+import closeIcon from '../../Assets/closeIcon.svg'
+import addIcon from '../../Assets/addIcon.svg'
 import './Player.scss'
 
 interface Props {
@@ -22,7 +22,6 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
   const { name, position, age, _id } = playerData
 
   const dispatch = useAppDispatch()
-  const rosterListArr = useAppSelector(selectRosterList)
 
   const handleClick = () => {
     if (rosterPlayer) {
@@ -33,10 +32,6 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
       dispatch(addPlayer(_id))
     }
   }
-
-  const disabled = rosterListArr.length >= 53 && !rosterPlayer ? true : false
-
-  const rosterName = name.split(' ')
 
   return (
     <div className="player-container">
@@ -49,11 +44,7 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
       </div>
 
       <div className="button-container">
-        <Button
-          label={rosterPlayer ? 'Remove' : 'Add'}
-          handleClick={handleClick}
-          disabled={disabled}
-        />
+        <img src={!rosterPlayer ? addIcon : closeIcon} onClick={handleClick} />
       </div>
     </div>
   )

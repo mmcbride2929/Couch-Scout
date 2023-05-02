@@ -3,22 +3,40 @@ import PlayerListContainer from './components/PlayerListContainer/PlayerListCont
 import { Provider } from 'react-redux'
 import store from './app/store'
 import RosterListContainer from './components/RosterListContainer/RosterListContainer'
-import Nav from './components/Nav/Nav'
+import FunctionalityBar from './components/FunctionalityBar/FunctionalityBar'
 import './styles/app.scss'
 import './styles/Global.scss'
-import FilterBySelect from './components/FilterBySelect/FilterBySelect'
-
+import { useState } from 'react'
+import PlayerHeader from './components/PlayerHeader/PlayerHeader'
+import RosterHeader from './components/RosterHeader/RosterHeader'
 const queryClient = new QueryClient()
 
 const App = () => {
+  const [displayAvailablePlayers, setDisplayAvailablePlayers] =
+    useState<boolean>(true)
+
+  const handleClick = () => {
+    setDisplayAvailablePlayers(!displayAvailablePlayers)
+  }
+
   return (
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <div className="App">
-          <Nav />
           <body className="body">
-            <PlayerListContainer />
-            <RosterListContainer />
+            {displayAvailablePlayers ? (
+              <>
+                <PlayerHeader />
+                <FunctionalityBar handleClick={handleClick} />
+                <PlayerListContainer />
+              </>
+            ) : (
+              <>
+                <RosterHeader />
+                <FunctionalityBar handleClick={handleClick} />
+                <RosterListContainer />
+              </>
+            )}
           </body>
         </div>
       </QueryClientProvider>
