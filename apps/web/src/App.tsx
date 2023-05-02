@@ -25,17 +25,25 @@ const App = () => {
         <div className="App">
           <body className="body">
             {displayAvailablePlayers ? (
-              <>
-                <PlayerHeader />
-                <FunctionalityBar handleClick={handleClick} />
-                <PlayerListContainer />
-              </>
+              <div className="page-content-container">
+                <div className="functionality">
+                  <PlayerHeader />
+                  <FunctionalityBar handleClick={handleClick} />
+                </div>
+                <div className="list-container">
+                  <PlayerListContainer />
+                </div>
+              </div>
             ) : (
-              <>
-                <RosterHeader />
-                <FunctionalityBar handleClick={handleClick} />
-                <RosterListContainer />
-              </>
+              <div className="page-content-container">
+                <div className="functionality">
+                  <RosterHeader />
+                  <FunctionalityBar handleClick={handleClick} />
+                </div>
+                <div className="list-container">
+                  <RosterListContainer />
+                </div>
+              </div>
             )}
           </body>
         </div>

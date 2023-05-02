@@ -5,6 +5,7 @@ import { selectPlayerList } from '../../features/application/playerListSlice'
 import { selectRosterList } from '../../features/application/rosterListSlice'
 import { selectActiveFilter } from '../../features/application/activeFilterSlice'
 import { filterBySearchBar } from '../../features/application/searchBarSlice'
+import './PlayerList.scss'
 
 export interface PlayerInterface {
   _id: string
@@ -58,14 +59,16 @@ const PlayerList = (): React.ReactElement => {
       : []
 
   return (
-    <div>
+    <div className="player-list-container">
       {displayPlayers?.map((singlePlayer) => {
         return (
-          <Player
-            key={singlePlayer._id}
-            playerData={singlePlayer}
-            rosterPlayer={false}
-          />
+          <div className="players-container-child">
+            <Player
+              key={singlePlayer._id}
+              playerData={singlePlayer}
+              rosterPlayer={false}
+            />
+          </div>
         )
       })}
     </div>

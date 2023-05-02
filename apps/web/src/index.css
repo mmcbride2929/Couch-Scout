@@ -5,3 +5,10 @@
   font-family: 'Recursive', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
+
+/* Hide the scroll bar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add a margin to the body element to compensate for the width of the scroll bar */

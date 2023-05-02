@@ -10,7 +10,7 @@ const FilterBySelect = () => {
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value
-    console.log(event.target.value)
+
     setValue(selectedValue)
     dispatch(setFilter(selectedValue))
   }

@@ -2,6 +2,7 @@
   display: flex;
   margin-top: 2px;
   margin-bottom: 2px;
+  border-bottom: 1px solid var(--gray);
 }
 
 .player-info-container {
@@ -9,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--gray);
 }
 
 .player-container h1 {
@@ -41,4 +41,20 @@
 
 .button-container img:hover {
   opacity: 0.85;
+}
+
+// page layout
+.page-content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.functionality {
+  flex: 0 0 auto;
+}
+
+.list-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
