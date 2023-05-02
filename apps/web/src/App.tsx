@@ -23,29 +23,27 @@ const App = () => {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <div className="App">
-          <body className="body">
-            {displayAvailablePlayers ? (
-              <div className="page-content-container">
-                <div className="functionality">
-                  <PlayerHeader />
-                  <FunctionalityBar handleClick={handleClick} />
-                </div>
-                <div className="list-container">
-                  <PlayerListContainer />
-                </div>
+          {displayAvailablePlayers ? (
+            <div className="page-content-container">
+              <div className="functionality">
+                <PlayerHeader />
+                <FunctionalityBar handleClick={handleClick} />
               </div>
-            ) : (
-              <div className="page-content-container">
-                <div className="functionality">
-                  <RosterHeader />
-                  <FunctionalityBar handleClick={handleClick} />
-                </div>
-                <div className="list-container">
-                  <RosterListContainer />
-                </div>
+              <div className="list-container">
+                <PlayerListContainer />
               </div>
-            )}
-          </body>
+            </div>
+          ) : (
+            <div className="page-content-container">
+              <div className="functionality">
+                <RosterHeader />
+                <FunctionalityBar handleClick={handleClick} />
+              </div>
+              <div className="list-container">
+                <RosterListContainer />
+              </div>
+            </div>
+          )}
         </div>
       </QueryClientProvider>
     </Provider>

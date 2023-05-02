@@ -62,13 +62,11 @@ const PlayerList = (): React.ReactElement => {
     <div className="player-list-container">
       {displayPlayers?.map((singlePlayer) => {
         return (
-          <div className="players-container-child">
-            <Player
-              key={singlePlayer._id}
-              playerData={singlePlayer}
-              rosterPlayer={false}
-            />
-          </div>
+          <Player
+            key={singlePlayer._id}
+            playerData={singlePlayer}
+            rosterPlayer={false}
+          />
         )
       })}
     </div>

@@ -1,7 +1,8 @@
-import { useAppDispatch } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import {
   addPlayer,
   removePlayer,
+  selectRosterList,
 } from '../../features/application/rosterListSlice'
 import closeIcon from '../../Assets/closeIcon.svg'
 import addIcon from '../../Assets/addIcon.svg'
@@ -22,13 +23,14 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
   const { name, position, age, _id } = playerData
 
   const dispatch = useAppDispatch()
+  const rosterListArr = useAppSelector(selectRosterList) as string[]
 
   const handleClick = () => {
     if (rosterPlayer) {
       dispatch(removePlayer(_id))
     }
 
-    if (!rosterPlayer) {
+    if (!rosterPlayer && rosterListArr.length < 53) {
       dispatch(addPlayer(_id))
     }
   }
