@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { setFilter } from '../../features/application/activeFilterSlice'
 import { useAppDispatch } from '../../app/hooks'
+import './FilterBySelect.scss'
 
 const FilterBySelect = () => {
   const [value, setValue] = useState<string>('')

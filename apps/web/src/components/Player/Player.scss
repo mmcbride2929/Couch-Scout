@@ -1,0 +1,34 @@
+.player-container {
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.player-info-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+}
+
+.player-container h1 {
+  font-size: 0.9rem;
+}
+
+.name {
+  width: 60%;
+}
+
+.age {
+  width: 20%;
+}
+.position {
+  width: 20%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}

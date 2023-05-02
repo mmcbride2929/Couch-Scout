@@ -5,6 +5,7 @@ import {
   selectRosterList,
 } from '../../features/application/rosterListSlice'
 import Button from '../Button/Button'
+import './Player.scss'
 
 interface Props {
   playerData: {
@@ -38,21 +39,22 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
   const rosterName = name.split(' ')
 
   return (
-    <div>
-      {rosterPlayer ? (
-        <h1>{rosterName[0].charAt(0) + '. ' + rosterName[1]}</h1>
-      ) : (
-        <>
-          <h1>{name}</h1>
-          <span>{position}</span>
-          <span>{age}</span>
-        </>
-      )}
-      <Button
-        label={rosterPlayer ? 'Remove' : 'Add'}
-        handleClick={handleClick}
-        disabled={disabled}
-      />
+    <div className="player-container">
+      <div className="player-info-container">
+        <h1 className="name">{name}</h1>
+        <h1 className="position">
+          {position === 'Special Teams' ? 'SPT' : position}
+        </h1>
+        <h1 className="age">{age}</h1>
+      </div>
+
+      <div className="button-container">
+        <Button
+          label={rosterPlayer ? 'Remove' : 'Add'}
+          handleClick={handleClick}
+          disabled={disabled}
+        />
+      </div>
     </div>
   )
 }

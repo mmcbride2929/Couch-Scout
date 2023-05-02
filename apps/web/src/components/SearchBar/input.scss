@@ -2,6 +2,8 @@
   height: 2rem;
   padding: 0.25rem;
   width: 200px;
+  border: 1.5px solid var(--black);
+  border-radius: 0.35rem;
 }
 
 .searchbar:focus {

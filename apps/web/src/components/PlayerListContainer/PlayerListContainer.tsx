@@ -4,6 +4,8 @@ import PlayerList from '../PlayerList/PlayerList'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
 import { populatePlayerList } from '../../features/application/playerListSlice'
+import PlayerHeader from '../PlayerHeader/PlayerHeader'
+import PlayerTableHeader from '../PlayerTableHeader/PlayerTableHeader'
 
 const PlayerListContainer = (): React.ReactElement => {
   const dispatch = useDispatch()
@@ -23,6 +25,18 @@ const PlayerListContainer = (): React.ReactElement => {
     return <>{error}</>
   }
 
-  return <>{isLoading ? <>Loading Players</> : <PlayerList />}</>
+  return (
+    <>
+      {isLoading ? (
+        <>Loading Players</>
+      ) : (
+        <>
+          <PlayerHeader />
+          <PlayerTableHeader />
+          <PlayerList />
+        </>
+      )}
+    </>
+  )
 }
 export default PlayerListContainer

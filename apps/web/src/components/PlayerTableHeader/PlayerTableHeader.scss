@@ -1,0 +1,30 @@
+.list-header-container {
+  display: flex;
+  margin-top: 1.75rem;
+  padding-bottom: 1px;
+}
+
+.player-properties {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.player-properties h1 {
+  font-size: 0.9rem;
+}
+
+.name {
+  width: 50%;
+}
+
+.age {
+  width: 25%;
+}
+.position {
+  width: 25%;
+}
+
+.empty {
+  width: 20%;
+}

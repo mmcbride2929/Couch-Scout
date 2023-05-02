@@ -1,6 +1,6 @@
 import Player from '../Player/Player'
 import { PlayerInterface } from '../PlayerList/PlayerList'
-import RosterListHeader from '../RosterListHeader/RosterListHeader'
+import RosterListHeader from '../RosterTableHeader/RosterListHeader'
 
 interface Props {
   position: string
@@ -17,7 +17,12 @@ const RosterListPositionGroup = ({
 
   return (
     <div>
-      {PlayerObjectsByRole.length > 0 && <RosterListHeader header={position} />}
+      {PlayerObjectsByRole.length > 0 && (
+        <RosterListHeader
+          amount={PlayerObjectsByRole.length}
+          header={position}
+        />
+      )}
 
       {PlayerObjectsByRole.map((player) => {
         return (

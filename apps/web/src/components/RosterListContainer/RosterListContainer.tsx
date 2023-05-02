@@ -4,6 +4,7 @@ import { selectRosterList } from '../../features/application/rosterListSlice'
 import RosterList from '../RosterList/RosterList'
 import { PlayerInterface } from '../PlayerList/PlayerList'
 import { selectPlayerList } from '../../features/application/playerListSlice'
+import RosterHeader from '../RosterHeader/RosterHeader'
 
 const RosterListContainer = (): React.ReactElement => {
   const rosterListArr = useAppSelector(selectRosterList) as string[]
@@ -14,10 +15,13 @@ const RosterListContainer = (): React.ReactElement => {
       {rosterListArr.length === 0 ? (
         <p>Add Players</p>
       ) : (
-        <RosterList
-          rosterListArr={rosterListArr}
-          playerListArr={playerListArr}
-        />
+        <>
+          <RosterHeader />
+          <RosterList
+            rosterListArr={rosterListArr}
+            playerListArr={playerListArr}
+          />
+        </>
       )}
     </>
   )
