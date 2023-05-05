@@ -9,7 +9,7 @@ interface Props {
   handleClick: () => void
 }
 
-const Nav = ({ handleClick }: Props) => {
+const FunctionalityBar = ({ handleClick }: Props) => {
   const dispatch = useAppDispatch()
 
   const handleReset = () => {
@@ -28,6 +28,4 @@ const Nav = ({ handleClick }: Props) => {
     </div>
   )
 }
-export default Nav
-
-// label logged in ? login : Logout
+export default FunctionalityBar

@@ -1,0 +1,332 @@
+[
+  {
+    "name": "Nick Moore",
+    "position": "Special Teams",
+    "age": 30,
+    "role": "spt"
+  },
+  {
+    "name": "odell beckham jr.",
+    "position": "WR",
+    "age": 30,
+    "role": "offense"
+  },
+  {
+    "name": "Nelson Agholor",
+    "position": "WR",
+    "age": 29,
+    "role": "offense"
+  },
+  {
+    "name": "Morgan Moses",
+    "position": "OT",
+    "age": 32,
+    "role": "offense"
+  },
+  {
+    "name": "Ronnie Stanley",
+    "position": "OT",
+    "age": 29,
+    "role": "offense"
+  },
+  {
+    "name": "Kyle Hamilton",
+    "position": "S",
+    "age": 22,
+    "role": "defense"
+  },
+  {
+    "name": "Bopete Keyes",
+    "position": "CB",
+    "age": 25,
+    "role": "defense"
+  },
+  {
+    "name": "Shemar Bridges",
+    "position": "WR",
+    "age": 25,
+    "role": "offense"
+  },
+  {
+    "name": "Gus Edwards",
+    "position": "RB",
+    "age": 28,
+    "role": "offense"
+  },
+  {
+    "name": "Michael Pierce",
+    "position": "DT",
+    "age": 30,
+    "role": "defense"
+  },
+  {
+    "name": "Josh Ross",
+    "position": "ILB",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Devin Duvernay",
+    "position": "WR",
+    "age": 25,
+    "role": "offense"
+  },
+  {
+    "name": "Travis Jones",
+    "position": "DT",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Mark Andrews",
+    "position": "TE",
+    "age": 27,
+    "role": "offense"
+  },
+  {
+    "name": "Jalyn Armour-Davis",
+    "position": "CB",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Malik Harrison",
+    "position": "ILB",
+    "age": 25,
+    "role": "defense"
+  },
+  {
+    "name": "Justice Hill",
+    "position": "RB",
+    "age": 25,
+    "role": "offense"
+  },
+  {
+    "name": "Charlie Kolar",
+    "position": "TE",
+    "age": 24,
+    "role": "offense"
+  },
+  {
+    "name": "Patrick Mekari",
+    "position": "G",
+    "age": 25,
+    "role": "offense"
+  },
+  {
+    "name": "David Sharpe",
+    "position": "OT",
+    "age": 27,
+    "role": "offense"
+  },
+  {
+    "name": "Kristian Welch",
+    "position": "ILB",
+    "age": 24,
+    "role": "defense"
+  },
+  {
+    "name": "Daniel Faalele",
+    "position": "OT",
+    "age": 23,
+    "role": "offense"
+  },
+  {
+    "name": "Andy Isabella",
+    "position": "WR",
+    "age": 26,
+    "role": "offense"
+  },
+  {
+    "name": "Justin Madubuike",
+    "position": "DT",
+    "age": 25,
+    "role": "defense"
+  },
+  {
+    "name": "Patrick Queen",
+    "position": "ILB",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "John Simpson",
+    "position": "G",
+    "age": 25,
+    "role": "offense"
+  },
+  {
+    "name": "Brandon Stephens",
+    "position": "CB",
+    "age": 25,
+    "role": "defense"
+  },
+  {
+    "name": "Lamar Jackson",
+    "position": "QB",
+    "age": 24,
+    "role": "offense"
+  },
+  {
+    "name": "Ben Mason",
+    "position": "RB",
+    "age": 23,
+    "role": "offense"
+  },
+  {
+    "name": "Trayvon Mullen",
+    "position": "CB",
+    "age": 25,
+    "role": "defense"
+  },
+  {
+    "name": "Roquan Smith",
+    "position": "ILB",
+    "age": 26,
+    "role": "defense"
+  },
+  {
+    "name": "Tylan Wallace",
+    "position": "WR",
+    "age": 23,
+    "role": "offense"
+  },
+  {
+    "name": "Mike Thomas",
+    "position": "WR",
+    "age": 28,
+    "role": "offense"
+  },
+  {
+    "name": "Patrick Ricard",
+    "position": "RB",
+    "age": 28,
+    "role": "offense"
+  },
+  {
+    "name": "Ben Cleveland",
+    "position": "G",
+    "age": 24,
+    "role": "offense"
+  },
+  {
+    "name": "Daelin Hayes",
+    "position": "OLB",
+    "age": 24,
+    "role": "defense"
+  },
+  {
+    "name": "Rayshad Nichols",
+    "position": "DT",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Geno Stone",
+    "position": "S",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Marlon Humphrey",
+    "position": "CB",
+    "age": 26,
+    "role": "defense"
+  },
+  {
+    "name": "Jordan Stout",
+    "position": "Special Teams",
+    "age": 24,
+    "role": "spt"
+  },
+  {
+    "name": "Tyler Linderbaum",
+    "position": "C",
+    "age": 23,
+    "role": "offense"
+  },
+  {
+    "name": "David Ojabo",
+    "position": "OLB",
+    "age": 22,
+    "role": "defense"
+  },
+  {
+    "name": "Odafe Oweh",
+    "position": "OLB",
+    "age": 24,
+    "role": "defense"
+  },
+  {
+    "name": "Broderick Washington",
+    "position": "DT",
+    "age": 26,
+    "role": "defense"
+  },
+  {
+    "name": "Del'Shawn Phillips",
+    "position": "ILB",
+    "age": 26,
+    "role": "defense"
+  },
+  {
+    "name": "Brent Urban",
+    "position": "OLB",
+    "age": 31,
+    "role": "defense"
+  },
+  {
+    "name": "Ar'Darius Washington",
+    "position": "S",
+    "age": 23,
+    "role": "defense"
+  },
+  {
+    "name": "Justin Tucker",
+    "position": "Special Teams",
+    "age": 33,
+    "role": "spt"
+  },
+  {
+    "name": "Rashod Bateman",
+    "position": "WR",
+    "age": 23,
+    "role": "offense"
+  },
+  {
+    "name": "J.K. Dobbins",
+    "position": "RB",
+    "age": 24,
+    "role": "offense"
+  },
+  {
+    "name": "Jeremiah Moon",
+    "position": "OLB",
+    "age": 24,
+    "role": "defense"
+  },
+  {
+    "name": "James Proche II",
+    "position": "WR",
+    "age": 26,
+    "role": "offense"
+  },
+  {
+    "name": "Tyus Bowser",
+    "position": "OLB",
+    "age": 27,
+    "role": "defense"
+  },
+  {
+    "name": "Anthony Brown",
+    "position": "QB",
+    "age": 24,
+    "role": "offense"
+  },
+  {
+    "name": "Isaiah Likely",
+    "position": "TE",
+    "age": 22,
+    "role": "offense"
+  }
+]

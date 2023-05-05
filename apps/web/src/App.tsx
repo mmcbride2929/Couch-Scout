@@ -9,6 +9,9 @@ import './styles/Global.scss'
 import { useState } from 'react'
 import PlayerHeader from './components/PlayerHeader/PlayerHeader'
 import RosterHeader from './components/RosterHeader/RosterHeader'
+import Nav from './components/Nav/Nav'
+import RosterTableHeader from './components/RosterTableHeader/RosterTableHeader'
+import PlayerTableHeader from './components/PlayerTableHeader/PlayerTableHeader'
 const queryClient = new QueryClient()
 
 const App = () => {
@@ -23,11 +26,13 @@ const App = () => {
     <Provider store={store}>
       <QueryClientProvider client={queryClient}>
         <div className="App">
+          <Nav />
           {displayAvailablePlayers ? (
             <div className="page-content-container">
               <div className="functionality">
                 <PlayerHeader />
                 <FunctionalityBar handleClick={handleClick} />
+                <PlayerTableHeader />
               </div>
               <div className="list-container">
                 <PlayerListContainer />
@@ -38,6 +43,7 @@ const App = () => {
               <div className="functionality">
                 <RosterHeader />
                 <FunctionalityBar handleClick={handleClick} />
+                <RosterTableHeader />
               </div>
               <div className="list-container">
                 <RosterListContainer />

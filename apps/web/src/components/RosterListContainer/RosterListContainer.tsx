@@ -13,7 +13,6 @@ const RosterListContainer = (): React.ReactElement => {
 
   return (
     <>
-      <RosterTableHeader />
       <RosterList rosterListArr={rosterListArr} playerListArr={playerListArr} />
     </>
   )
