@@ -3,6 +3,7 @@ import playerListSlice from '../features/application/playerListSlice'
 import rosterListSlice from '../features/application/rosterListSlice'
 import activeFilterSlice from '../features/application/activeFilterSlice'
 import searchBarSlice from '../features/application/searchBarSlice'
+import activeTeamSlice from '../features/application/activeTeamSlice'
 
 const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ const store = configureStore({
     rosterList: rosterListSlice,
     filter: activeFilterSlice,
     searchbar: searchBarSlice,
+    team: activeTeamSlice,
   },
 })
 

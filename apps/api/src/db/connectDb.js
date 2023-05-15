@@ -1,7 +1,8 @@
 import mongoose from 'mongoose'
 
 const connectDB = (url) => {
-  return mongoose.connect(url)
+  const db = mongoose.connect(url)
+  return db
 }
 
 export default connectDB

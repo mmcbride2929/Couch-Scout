@@ -1,11 +1,16 @@
-import Player from '../models/playerModel'
+import Player from '../models/playerModel.js'
+import mongoose from 'mongoose'
 
 const getPlayers = async (req, res) => {
-  try {
-    const players = await Player.find()
+  const collectionName = req.params.team
 
+  try {
+    const db = mongoose.connection.db
+    const collection = db.collection(collectionName)
+    const players = await collection.find().toArray()
     res.status(200).send(players)
   } catch (error) {
+    console.log(error)
     res.status(500).json({ msg: 'fetch failed, there was an error' })
   }
 }

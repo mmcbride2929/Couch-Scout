@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom'
 import './Nav.scss'
-import ravenIcon from '../../Assets/ravensLogo.png'
 
 const Nav = () => {
   return (
     <nav>
-      <a href="https://www.baltimoreravens.com/team/players-roster/">
-        <img src={ravenIcon} alt="logo" />
-      </a>
+      <Link to="/">Final53</Link>
+      // add image of nfl, and when team is selected, add team here.
     </nav>
   )
 }

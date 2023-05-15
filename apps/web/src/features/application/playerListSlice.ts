@@ -14,8 +14,7 @@ const playersListSlice = createSlice({
   initialState: initialState,
   reducers: {
     populatePlayerList: (state, action) => {
-      state.playersListState = [...state.playersListState, ...action.payload]
-      console.log(state.playersListState)
+      state.playersListState = action.payload
     },
   },
 })

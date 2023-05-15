@@ -46,14 +46,6 @@ const RosterList = ({ rosterListArr, playerListArr }: Props) => {
             players={filteredRosterPlayers}
           />
           <RosterListPositionGroup
-            position="CB"
-            players={filteredRosterPlayers}
-          />
-          <RosterListPositionGroup
-            position="S"
-            players={filteredRosterPlayers}
-          />
-          <RosterListPositionGroup
             position="DT"
             players={filteredRosterPlayers}
           />
@@ -65,6 +57,15 @@ const RosterList = ({ rosterListArr, playerListArr }: Props) => {
             position="OLB"
             players={filteredRosterPlayers}
           />
+          <RosterListPositionGroup
+            position="CB"
+            players={filteredRosterPlayers}
+          />
+          <RosterListPositionGroup
+            position="S"
+            players={filteredRosterPlayers}
+          />
+
           <RosterListPositionGroup
             position="Special Teams"
             players={filteredRosterPlayers}

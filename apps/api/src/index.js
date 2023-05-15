@@ -1,11 +1,11 @@
-import express, { Express } from 'express'
+import express from 'express'
 import cors from 'cors'
-import connectDB from './db/connectDb'
+import connectDB from './db/connectDb.js'
 import dotenv from 'dotenv'
-import router from './routes/router'
+import router from './routes/router.js'
 import bodyParser from 'body-parser'
 
-const app: Express = express()
+const app = express()
 
 dotenv.config()
 app.use(cors())

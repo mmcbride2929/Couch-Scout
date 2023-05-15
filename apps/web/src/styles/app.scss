@@ -1,9 +1,5 @@
 .App {
   background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .page-content-container {
@@ -13,4 +9,12 @@
   width: 100%;
   min-width: 300px;
   max-width: 900px;
+}
+
+// home page
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
