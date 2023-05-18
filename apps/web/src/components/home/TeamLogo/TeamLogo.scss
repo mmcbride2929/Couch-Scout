@@ -5,10 +5,9 @@
 .logo-icon-container img {
   width: 5.75rem;
   opacity: 0.35;
-}
-
-.active-team {
-  width: 5.75rem;
+  @media only screen and (max-width: 450px) {
+    width: 4.5rem;
+  }
 }
 
 .active-team img {

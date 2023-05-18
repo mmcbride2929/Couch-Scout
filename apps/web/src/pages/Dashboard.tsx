@@ -36,7 +36,7 @@ const Home = () => {
             <FunctionalityBar handleClick={handleClick} />
             <PlayerTableHeader />
           </div>
-          <div className="list-container">
+          <div className="">
             <PlayerListContainer />
           </div>
         </div>

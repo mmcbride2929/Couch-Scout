@@ -1,29 +1,23 @@
-.App {
-  background-color: var(--white);
+body {
+  min-height: 100vh;
 }
 
 .page-content-container {
+  max-height: 90vh;
   background-color: white;
   padding: 1rem;
-  height: 94vh;
   width: 100%;
   min-width: 300px;
-  max-width: 900px;
-}
-
-// home page
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .home-page-content-container {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  background-color: var(--white);
   padding: 1rem;
-  height: 94vh;
   width: 100%;
   min-width: 300px;
-  max-width: 900px;
+  height: 90vh;
 }

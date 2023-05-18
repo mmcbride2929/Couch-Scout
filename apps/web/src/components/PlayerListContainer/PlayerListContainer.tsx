@@ -35,9 +35,9 @@ const PlayerListContainer = (): React.ReactElement => {
           <h1 className="loading-title">Loading Players..</h1>
         </div>
       ) : (
-        <>
+        <div className="player-list-wrapper">
           <PlayerList />
-        </>
+        </div>
       )}
     </>
   )

@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import Nav from './components/Nav/Nav'
 import Error from './pages/Error'
+import Footer from './components/Footer/Footer'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -19,12 +20,13 @@ const queryClient = new QueryClient()
 
 const Root = () => {
   return (
-    <>
+    <body>
       <Nav />
       <div>
         <Outlet />
       </div>
-    </>
+      <Footer />
+    </body>
   )
 }
 
@@ -44,8 +46,6 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <div className="App">
           <RouterProvider router={router} />
-          {/* <Home />
-          <Dashboard /> */}
         </div>
       </QueryClientProvider>
     </Provider>

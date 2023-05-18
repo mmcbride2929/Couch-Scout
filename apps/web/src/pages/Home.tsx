@@ -25,6 +25,7 @@ const Teams = () => {
   return (
     <div className="home-page-content-container">
       <Header />
+
       <TeamLogoContainer setTeam={setTeam} selectedTeam={selectedTeam} />
 
       <CarouselNavigation
@@ -35,8 +36,3 @@ const Teams = () => {
   )
 }
 export default Teams
-
-// afc/nfc current state for toggle
-// state for if selected  => team?
-//need link to be team name on dashboard & also for fetching link
-// logoState needs to be passed from here, and set from children

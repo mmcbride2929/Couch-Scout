@@ -1,19 +1,13 @@
-nav {
+.footer {
   height: 5vh;
   width: 100%;
   background-color: var(--black);
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
   margin-top: 0.25rem;
-  width: 3.75rem;
-}
-
-.nfl-logo {
   width: 3.75rem;
 }
