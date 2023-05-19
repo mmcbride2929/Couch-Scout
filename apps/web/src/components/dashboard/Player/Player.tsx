@@ -1,11 +1,11 @@
-import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import {
   addPlayer,
   removePlayer,
   selectRosterList,
-} from '../../features/application/rosterListSlice'
-import closeIcon from '../../Assets/closeIcon.svg'
-import addIcon from '../../Assets/addIcon.svg'
+} from '../../../features/application/rosterListSlice'
+import closeIcon from '../../../Assets/closeIcon.svg'
+import addIcon from '../../../Assets/addIcon.svg'
 import './Player.scss'
 
 interface Props {

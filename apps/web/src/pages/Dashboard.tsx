@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import FunctionalityBar from '../components/FunctionalityBar/FunctionalityBar'
-import PlayerHeader from '../components/PlayerHeader/PlayerHeader'
-import PlayerListContainer from '../components/PlayerListContainer/PlayerListContainer'
-import RosterHeader from '../components/RosterHeader/RosterHeader'
-import RosterTableHeader from '../components/RosterTableHeader/RosterTableHeader'
-import RosterListContainer from '../components/RosterListContainer/RosterListContainer'
-import PlayerTableHeader from '../components/PlayerTableHeader/PlayerTableHeader'
+import FunctionalityBar from '../components/dashboard/FunctionalityBar/FunctionalityBar'
 import { useAppSelector } from '../app/hooks'
 import { selectActiveTeam } from '../features/application/activeTeamSlice'
 import { useNavigate } from 'react-router-dom'
+import PlayerHeader from '../components/dashboard/PlayerHeader/PlayerHeader'
+import PlayerTableHeader from '../components/dashboard/PlayerTableHeader/PlayerTableHeader'
+import PlayerListContainer from '../components/dashboard/PlayerListContainer/PlayerListContainer'
+import RosterTableHeader from '../components/dashboard/RosterTableHeader/RosterTableHeader'
+import RosterHeader from '../components/dashboard/RosterHeader/RosterHeader'
+import RosterListContainer from '../components/dashboard/RosterListContainer/RosterListContainer'
 
 const Home = () => {
   const team = useAppSelector(selectActiveTeam)

@@ -1,6 +1,6 @@
+import { useAppDispatch } from '../../../app/hooks'
+import { setSearchFilter } from '../../../features/application/searchBarSlice'
 import Input from './Input'
-import { useAppDispatch } from '../../app/hooks'
-import { setSearchFilter } from '../../features/application/searchBarSlice'
 
 const SearchBar = () => {
   const dispatch = useAppDispatch()

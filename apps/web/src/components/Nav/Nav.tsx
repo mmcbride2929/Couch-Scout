@@ -6,10 +6,12 @@ import nflLogo from '../../Assets/nflIcon.png'
 const Nav = () => {
   return (
     <nav>
-      <Link to="/">
-        <img className="logo" src={logo} alt="app-logo" />
-      </Link>
-      <img className="nfl-logo" src={nflLogo} alt="nfl-logo" />
+      <div className="nav-icons">
+        <Link to="/">
+          <img className="logo" src={logo} alt="app-logo" />
+        </Link>
+        <img className="nfl-logo" src={nflLogo} alt="nfl-logo" />
+      </div>
     </nav>
   )
 }

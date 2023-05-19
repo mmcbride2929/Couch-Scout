@@ -1,11 +1,9 @@
 import * as React from 'react'
-import { useAppSelector } from '../../app/hooks'
-import { selectRosterList } from '../../features/application/rosterListSlice'
 import RosterList from '../RosterList/RosterList'
 import { PlayerInterface } from '../PlayerList/PlayerList'
-import { selectPlayerList } from '../../features/application/playerListSlice'
-import RosterHeader from '../RosterHeader/RosterHeader'
-import RosterTableHeader from '../RosterTableHeader/RosterTableHeader'
+import { useAppSelector } from '../../../app/hooks'
+import { selectPlayerList } from '../../../features/application/playerListSlice'
+import { selectRosterList } from '../../../features/application/rosterListSlice'
 
 const RosterListContainer = (): React.ReactElement => {
   const rosterListArr = useAppSelector(selectRosterList) as string[]

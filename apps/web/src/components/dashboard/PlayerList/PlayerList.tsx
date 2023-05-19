@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Player from '../Player/Player'
-import { useAppSelector } from '../../app/hooks'
-import { selectPlayerList } from '../../features/application/playerListSlice'
-import { selectRosterList } from '../../features/application/rosterListSlice'
-import { selectActiveFilter } from '../../features/application/activeFilterSlice'
-import { filterBySearchBar } from '../../features/application/searchBarSlice'
+
 import './PlayerList.scss'
+import { useAppSelector } from '../../../app/hooks'
+import { selectPlayerList } from '../../../features/application/playerListSlice'
+import { selectRosterList } from '../../../features/application/rosterListSlice'
+import { selectActiveFilter } from '../../../features/application/activeFilterSlice'
+import { filterBySearchBar } from '../../../features/application/searchBarSlice'
 
 export interface PlayerInterface {
   _id: string

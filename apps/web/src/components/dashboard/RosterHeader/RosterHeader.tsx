@@ -1,5 +1,5 @@
-import { useAppSelector } from '../../app/hooks'
-import { selectRosterList } from '../../features/application/rosterListSlice'
+import { useAppSelector } from '../../../app/hooks'
+import { selectRosterList } from '../../../features/application/rosterListSlice'
 import './RosterHeader.scss'
 
 const RosterHeader = () => {

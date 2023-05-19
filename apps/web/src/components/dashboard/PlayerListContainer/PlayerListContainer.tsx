@@ -3,10 +3,10 @@ import { useQuery } from 'react-query'
 import PlayerList from '../PlayerList/PlayerList'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { populatePlayerList } from '../../features/application/playerListSlice'
 import './PlayerListContainer.scss'
-import { useAppSelector } from '../../app/hooks'
-import { selectActiveTeam } from '../../features/application/activeTeamSlice'
+import { selectActiveTeam } from '../../../features/application/activeTeamSlice'
+import { useAppSelector } from '../../../app/hooks'
+import { populatePlayerList } from '../../../features/application/playerListSlice'
 
 const PlayerListContainer = (): React.ReactElement => {
   const dispatch = useDispatch()

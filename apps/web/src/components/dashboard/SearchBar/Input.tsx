@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import './input.scss'
-import searchIcon from '../../Assets/searchIcon.svg'
 
 interface Props {
   handleOnChange: (searchParam: string) => void

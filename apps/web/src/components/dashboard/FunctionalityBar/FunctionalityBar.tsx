@@ -1,9 +1,9 @@
 import Searchbar from '../SearchBar/SearchBar'
 import Toggle from '../Toggle/Toggle'
 import './FunctionalityBar.scss'
-import resetIcon from '../../Assets/resetIcon.svg'
-import { resetRoster } from '../../features/application/rosterListSlice'
-import { useAppDispatch } from '../../app/hooks'
+import resetIcon from '../../../Assets/resetIcon.svg'
+import { resetRoster } from '../../../features/application/rosterListSlice'
+import { useAppDispatch } from '../../../app/hooks'
 
 interface Props {
   handleClick: () => void
