@@ -12,7 +12,7 @@ const RosterListPositionGroup = ({
   position,
 }: Props): React.ReactElement => {
   const PlayerObjectsByRole: PlayerInterface[] = players.filter(
-    (player) => player.position === position
+    (player) => player.position.toLowerCase() === position.toLowerCase()
   )
 
   return (

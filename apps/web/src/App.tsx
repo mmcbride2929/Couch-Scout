@@ -22,9 +22,9 @@ const Root = () => {
   return (
     <body>
       <Nav />
-      <div>
+      <>
         <Outlet />
-      </div>
+      </>
       <Footer />
     </body>
   )

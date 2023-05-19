@@ -8,7 +8,9 @@ interface Props {
 const CarouselNavigation = ({ handleClick, selectedTeam }: Props) => {
   return (
     <div className="carousel-navigation-container">
-      <h1>{selectedTeam.toUpperCase()}</h1>
+      <h1>
+        {selectedTeam === 'fortyniners' ? '49ERS' : selectedTeam.toUpperCase()}
+      </h1>
       <button onClick={handleClick}>START</button>
     </div>
   )

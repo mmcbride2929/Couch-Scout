@@ -15,7 +15,7 @@ const Teams = ({ setTeam, teamArray, selectedTeam }: Props) => {
 
   useEffect(() => {
     setTeam(teamArray[currentIndex])
-  }, [currentIndex])
+  }, [currentIndex, teamArray])
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>

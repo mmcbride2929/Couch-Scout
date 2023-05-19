@@ -40,7 +40,7 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
       <div className="player-info-container">
         <h1 className="name">{name}</h1>
         <h1 className="position">
-          {position === 'Special Teams' ? 'SPT' : position}
+          {position === 'Special Teams' ? 'SPT' : position.toUpperCase()}
         </h1>
         <h1 className="age">{age}</h1>
       </div>

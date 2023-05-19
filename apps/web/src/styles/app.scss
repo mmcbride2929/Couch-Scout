@@ -4,10 +4,11 @@ body {
 
 .page-content-container {
   max-height: 90vh;
-  background-color: white;
+  max-width: 750px;
   padding: 1rem;
   width: 100%;
   min-width: 300px;
+  margin: 0 auto;
 }
 
 .home-page-content-container {
@@ -20,4 +21,8 @@ body {
   width: 100%;
   min-width: 300px;
   height: 90vh;
+}
+
+.home-container {
+  background-color: var(--white);
 }

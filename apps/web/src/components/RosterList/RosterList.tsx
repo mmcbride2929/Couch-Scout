@@ -38,11 +38,11 @@ const RosterList = ({ rosterListArr, playerListArr }: Props) => {
             players={filteredRosterPlayers}
           />
           <RosterListPositionGroup
-            position="OT"
+            position="IOL"
             players={filteredRosterPlayers}
           />
           <RosterListPositionGroup
-            position="IOL"
+            position="OT"
             players={filteredRosterPlayers}
           />
           <RosterListPositionGroup
