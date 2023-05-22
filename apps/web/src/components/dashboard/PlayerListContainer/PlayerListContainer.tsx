@@ -13,7 +13,9 @@ const PlayerListContainer = (): React.ReactElement => {
   const team = useAppSelector(selectActiveTeam)
 
   const fetchPlayers = async () => {
-    const response = await axios.get(`http://localhost:5100/${team}`)
+    const response = await axios.get(
+      `https://roster-predictor-v2-production.up.railway.app/${team}`
+    )
     const data = response.data
     dispatch(populatePlayerList(data))
     return data
