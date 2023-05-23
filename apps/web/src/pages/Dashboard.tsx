@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import FunctionalityBar from '../components/dashboard/FunctionalityBar/FunctionalityBar'
-import { useAppSelector } from '../app/hooks'
+import { useAppDispatch, useAppSelector } from '../app/hooks'
 import { selectActiveTeam } from '../features/application/activeTeamSlice'
 import { useNavigate } from 'react-router-dom'
 import PlayerHeader from '../components/dashboard/PlayerHeader/PlayerHeader'
@@ -9,11 +9,14 @@ import PlayerListContainer from '../components/dashboard/PlayerListContainer/Pla
 import RosterTableHeader from '../components/dashboard/RosterTableHeader/RosterTableHeader'
 import RosterHeader from '../components/dashboard/RosterHeader/RosterHeader'
 import RosterListContainer from '../components/dashboard/RosterListContainer/RosterListContainer'
+import { resetRoster } from '../features/application/rosterListSlice'
 
 const Home = () => {
   const team = useAppSelector(selectActiveTeam)
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
+  const [initialLoad, setInitialLoad] = useState<boolean>(true)
   const [displayAvailablePlayers, setDisplayAvailablePlayers] =
     useState<boolean>(true)
 
@@ -21,38 +24,50 @@ const Home = () => {
     setDisplayAvailablePlayers(!displayAvailablePlayers)
   }
 
+  const handleReset = () => {
+    dispatch(resetRoster())
+  }
+
   useEffect(() => {
     if (!team) {
       navigate('/')
+
+      handleReset()
     }
-  }, [team])
+  }, [team, navigate])
 
   return (
     <div className="home-container">
-      {displayAvailablePlayers ? (
-        <div className="page-content-container">
-          <div className="functionality">
-            <PlayerHeader />
-            <FunctionalityBar handleClick={handleClick} />
+      <div className="page-content-container">
+        <div className="functionality">
+          <PlayerHeader
+            handleClick={handleClick}
+            displayAvailablePlayers={displayAvailablePlayers}
+          />
+          <FunctionalityBar />
+        </div>
+
+        {displayAvailablePlayers ? (
+          <>
             <PlayerTableHeader />
-          </div>
-          <div className="">
-            <PlayerListContainer />
-          </div>
-        </div>
-      ) : (
-        <div className="page-content-container">
-          <div className="functionality">
-            <RosterHeader />
-            <FunctionalityBar handleClick={handleClick} />
+            <div className="list-container">
+              <PlayerListContainer
+                initialLoad={initialLoad}
+                setInitialLoad={setInitialLoad}
+              />
+            </div>
+          </>
+        ) : (
+          <>
             <RosterTableHeader />
-          </div>
-          <div className="list-container">
-            <RosterListContainer />
-          </div>
-        </div>
-      )}
+            <div className="list-container">
+              <RosterListContainer />
+            </div>
+          </>
+        )}
+      </div>
     </div>
   )
 }
+
 export default Home

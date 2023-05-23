@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TeamLogoContainer from '../components/home/TeamLogoContainer/TeamLogoContainer'
 import { useAppDispatch } from '../app/hooks'
 import { setActiveTeam } from '../features/application/activeTeamSlice'
 import { useNavigate } from 'react-router-dom'
 import CarouselNavigation from '../components/home/CarouselNavigation/CarouselNavigation'
 import Header from '../components/home/Header/Header'
+import { resetRoster } from '../features/application/rosterListSlice'
 
 const Teams = () => {
   const [selectedTeam, setSelectedTeam] = useState<string>('')
@@ -22,6 +23,15 @@ const Teams = () => {
       navigate(`/${selectedTeam}`)
     }
   }
+
+  const handleReset = () => {
+    dispatch(resetRoster())
+  }
+
+  useEffect(() => {
+    handleReset()
+  })
+
   return (
     <div className="home-page-content-container">
       <Header />

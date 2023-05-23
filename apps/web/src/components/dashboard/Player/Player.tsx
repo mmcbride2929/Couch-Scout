@@ -44,9 +44,13 @@ const Player = ({ playerData, rosterPlayer }: Props) => {
         </h1>
         <h1 className="age">{age}</h1>
       </div>
-
       <div className="button-container">
-        <img src={!rosterPlayer ? addIcon : closeIcon} onClick={handleClick} />
+        <button>
+          <img
+            src={!rosterPlayer ? addIcon : closeIcon}
+            onClick={handleClick}
+          />
+        </button>
       </div>
     </div>
   )

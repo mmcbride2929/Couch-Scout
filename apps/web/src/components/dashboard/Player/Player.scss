@@ -3,6 +3,7 @@
   margin-top: 2px;
   margin-bottom: 2px;
   border-bottom: 1px solid var(--gray);
+  padding: 3px 0;
 }
 
 .player-info-container {
@@ -35,14 +36,21 @@
 
 .button-container img {
   width: 1.25rem;
-  opacity: 0.5;
   cursor: pointer;
+  filter: invert(100%);
 }
 
-.button-container img:hover {
-  opacity: 0.85;
+.button-container button {
+  display: flex;
+  border: none;
+  border-radius: 3px;
+  padding: 2px;
+  background-color: var(--black);
 }
 
+.button-container button:hover {
+  background-color: var(--dark-gray);
+}
 // page layout
 .page-content-container {
   display: flex;

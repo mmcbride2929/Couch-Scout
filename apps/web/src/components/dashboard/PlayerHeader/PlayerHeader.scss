@@ -8,5 +8,38 @@
 }
 
 .player-available-container h1 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+}
+
+.right-container h1 {
+  padding: 0 0.5rem;
+}
+
+.left-container-player-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.left-container-player-header button:focus {
+  outline: none;
+}
+
+.left-container-player-header button img {
+  width: 1.1rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.left-container-player-header button img:hover {
+  opacity: 0.6;
 }

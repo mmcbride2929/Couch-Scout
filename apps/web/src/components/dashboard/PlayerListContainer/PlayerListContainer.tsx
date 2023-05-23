@@ -8,7 +8,15 @@ import { selectActiveTeam } from '../../../features/application/activeTeamSlice'
 import { useAppSelector } from '../../../app/hooks'
 import { populatePlayerList } from '../../../features/application/playerListSlice'
 
-const PlayerListContainer = (): React.ReactElement => {
+interface Props {
+  initialLoad: boolean
+  setInitialLoad: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const PlayerListContainer = ({
+  initialLoad,
+  setInitialLoad,
+}: Props): React.ReactElement => {
   const dispatch = useDispatch()
   const team = useAppSelector(selectActiveTeam)
 
@@ -38,7 +46,10 @@ const PlayerListContainer = (): React.ReactElement => {
         </div>
       ) : (
         <div className="player-list-wrapper">
-          <PlayerList />
+          <PlayerList
+            initialLoad={initialLoad}
+            setInitialLoad={setInitialLoad}
+          />
         </div>
       )}
     </>

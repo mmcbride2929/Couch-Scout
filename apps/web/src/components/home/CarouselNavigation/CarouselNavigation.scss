@@ -18,15 +18,14 @@
   margin-top: 2rem;
   font-size: 0.75rem;
   background-color: var(--black);
-  border-radius: 1.2rem;
-  max-width: 7rem;
-  padding: 0.6rem 1.5rem;
+  border-radius: 0.2rem;
+  max-width: 5rem;
+  padding: 0.5rem 1rem;
   color: var(--white);
   cursor: pointer;
   border: none;
 }
 
 .carousel-navigation-container button:hover {
-  color: var(--black);
-  background-color: var(--white);
+  background-color: var(--dark-gray);
 }

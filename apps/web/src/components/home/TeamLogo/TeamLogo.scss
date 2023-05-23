@@ -13,3 +13,12 @@
 .active-team img {
   opacity: 1;
 }
+
+.team-carousel-container {
+  transition: 200ms o;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+}

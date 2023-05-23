@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard'
 import Nav from './components/Nav/Nav'
 import Error from './pages/Error'
 import Footer from './components/Footer/Footer'
+
 import {
   createBrowserRouter,
   RouterProvider,
