@@ -30,7 +30,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!team) {
-      navigate('/')
+      navigate('https://final53.netlify.app/')
 
       handleReset()
     }
