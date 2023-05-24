@@ -1,6 +1,6 @@
 # Final53
 
-The roster building app is a powerful tool designed for developers to facilitate the creation of a final 53 man roster for any NFL team. Built using React and TypeScript, this application provides a seamless user experience while allowing users to effectively narrow down a full roster. Leveraging the capabilities of a MongoDB database and a Node.js backend, the app ensures efficient data storage and retrieval. With its intuitive interface and robust functionality, this project serves as an invaluable asset for developers looking to streamline the roster building process.
+The roster building app is designed for fans to create a final 53 man roster for any NFL team. Users can select any team, add and cut players, sort by offense & defense, and lastly search for players via the searchbar at the top. 
 
 **DEMO:** https://final53.netlify.app/
 
